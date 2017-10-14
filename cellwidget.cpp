@@ -3,7 +3,7 @@
 #include <QFont>
 
 CellWidget::CellWidget(QWidget *parent, QString id) : QLabel(parent)
-  ,number(0), ID(id)
+  ,number(0), ID(id), lastNumber(0)
 {
     QFont font;
     font.setPointSize(25);
@@ -38,19 +38,28 @@ int CellWidget::GetNumber()
 
 void CellWidget::SetNumber(int num)
 {
+    lastNumber = number;
     number = num;
     Update();
 }
 
 void CellWidget::SetInitionalNumber()
 {
+    lastNumber = number;
     number = 2;
     Update();
 }
 
 void CellWidget::Clear()
 {
+    lastNumber = 0;
     number = 0;
+    Update();
+}
+
+void CellWidget::ReturnLastNumber()
+{
+    number = lastNumber;
     Update();
 }
 

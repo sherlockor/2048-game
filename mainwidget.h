@@ -16,12 +16,18 @@ public:
     ~MainWidget();
 
 public:
+
+public slots:
     /*
      * @brief 重新开始
      */
-    void Restert();
+    void SlotRestart();
 
-public slots:
+    /*
+     * @brief 上一步
+     */
+    void SlotRevoke();
+
     /*
      * @brief 按键槽函数
      */

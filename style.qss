@@ -1,0 +1,6 @@
+QCustomLabel{
+	background-color:#BFAD97;
+}
+QCustomLabel:hover{
+	background-color:#B2A18C;
+}

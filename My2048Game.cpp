@@ -45,6 +45,9 @@ void Widget::InitConnection()
     connect(this, SIGNAL(SignalOnClickDownButton()), mainWidget, SLOT(SlotOnClickDownButton()));
     connect(this, SIGNAL(SignalOnClickLeftButton()), mainWidget, SLOT(SlotOnClickLeftButton()));
     connect(this, SIGNAL(SignalOnClickRightButton()), mainWidget, SLOT(SlotOnClickRightButton()));
+
+    connect(tailWidget, SIGNAL(SignalRestart()), mainWidget, SLOT(SlotRestart()));
+    connect(tailWidget, SIGNAL(SignalRevoke()), mainWidget, SLOT(SlotRevoke()));
 }
 
 void Widget::keyPressEvent(QKeyEvent *event)

@@ -35,6 +35,11 @@ public:
     void Clear();
 
     /*
+     * 返回上一次的数字
+     */
+    void ReturnLastNumber();
+
+    /*
      * @brief 获取ID
      */
     QString GetID();
@@ -49,6 +54,7 @@ public slots:
 
 private:
     int number;
+    int lastNumber;
 
     QString ID;
 

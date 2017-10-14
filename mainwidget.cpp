@@ -64,7 +64,8 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent)
     main_widet_layout->addWidget(D4, 3, 3, 1, 1);
     setLayout(main_widet_layout);
 
-    InitData();}
+    InitData();
+}
 
 MainWidget::~MainWidget()
 {
@@ -86,13 +87,21 @@ MainWidget::~MainWidget()
     delete D4;
 }
 
-void MainWidget::Restert()
+void MainWidget::SlotRestart()
 {
     for(int index = 0; index < cellVector.count(); index++)
     {
-        cellVector.at(index)->clear();
+        cellVector.at(index)->Clear();
     }
     InitData();
+}
+
+void MainWidget::SlotRevoke()
+{
+    for(int index = 0; index < cellVector.count(); index++)
+    {
+        cellVector.at(index)->ReturnLastNumber();
+    }
 }
 
 void MainWidget::InitData()

@@ -5,6 +5,8 @@
 #include <QPaintEvent>
 
 class QPushButton;
+class QToolButton;
+class QCustomLabel;
 
 class TailWidget : public QWidget
 {
@@ -13,14 +15,19 @@ public:
     explicit TailWidget(QWidget *parent = 0);
 
 signals:
+    void SignalRestart();
+    void SignalRevoke();
 
 public slots:
+    void SlotOnClickRestartButton();
+    void SlotOnClickRevokeButton();
 
 protected:
     void paintEvent(QPaintEvent* event);
 
 private:
-    QPushButton* restartButton;
+    QCustomLabel* restartButton;
+    QCustomLabel* revokeButton;
 };
 
 #endif // TAILWIDGET_H

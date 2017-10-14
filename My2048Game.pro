@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     mainwidget.cpp \
     My2048Game.cpp \
     extrafunction.cpp \
-    tailwidget.cpp
+    tailwidget.cpp \
+    qcustomlabel.cpp
 
 HEADERS  += \
     cellwidget.h \
@@ -26,6 +27,10 @@ HEADERS  += \
     mainwidget.h \
     My2048Game.h \
     extrafunction.h \
-    tailwidget.h
+    tailwidget.h \
+    qcustomlabel.h
 
 FORMS    += widget.ui
+
+RESOURCES += \
+    qss.qrc
